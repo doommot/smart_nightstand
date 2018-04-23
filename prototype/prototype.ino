@@ -129,10 +129,10 @@ void white_button()
 
 void color_button()
 {
-	if((mode==1)||(mode==3))
+	if((mode==0)||(mode==1)||(mode==3))
 	{
 		mode=2;
-    RGB(color);
+		RGB(color);
 		analogWrite(white_pin, off);
 		_delay_ms(80);
 		return;
@@ -141,7 +141,7 @@ void color_button()
 	{
 		mode=3;
 		RGB(color);
-    analogWrite(white_pin, off);
+		analogWrite(white_pin, off);
 		_delay_ms(80);
 		return;
 	}
